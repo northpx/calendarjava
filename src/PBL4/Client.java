@@ -115,7 +115,17 @@ public class Client extends JFrame implements ActionListener{
 			System.out.print(year);
 			os.writeUTF(year);
 			os.flush();
-			txtArea.setText(is.readUTF());
+			//doc du lieu tu server luu vao bien rs
+			String rs = is.readUTF();
+			
+			//cat chuoi rs thanh 12 thang
+			String[] arrOfMonth = rs.split("---------------------------\n",13);
+			
+			//hien thi lich len 12 textarea
+			for(String a : arrOfMonth)
+				System.out.println(a);
+				//gan moi arrOfMonth[i] cho moi txtArea hoac gan thu cong txtArea1.setText(arr[1])
+			
 		} catch (Exception e1) {
 			System.out.print(e1);
 		}

@@ -89,7 +89,7 @@ class XuLyClient1 extends Thread{
 			s+=" "+ year + "\n";
 			s+=printMonth(numberOfDays, startDay);
 //			System.out.println();
-			s+="\n";
+			s+="---------------------------\n";
 		}
 		return s;
 	}	
